@@ -26,5 +26,13 @@ namespace Acme.Library
 
             return result;
         }
+
+        public TrapResult TryCatchRoadrunner(TrapType trapType)
+        {
+            var trap = TrapFactory.Create(trapType);
+            var result = TrapProcessor.Process(trap);
+
+            return result;
+        }
     }
 }
