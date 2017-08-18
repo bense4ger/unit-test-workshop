@@ -19,7 +19,8 @@ namespace Acme.Library
 
         public TrapResult TryCatchRoadrunner()
         {
-            var trapType = TypeSelector.Select();
+            var rnd = new Random();
+            var trapType = TypeSelector.Select(rnd.Next(0,2));
             var trap = TrapFactory.Create(trapType);
             var result = TrapProcessor.Process(trap);
 
