@@ -7,7 +7,9 @@ namespace Acme.Library
     {
         public TrapType Select(int typeSeed)
         {
-            throw new NotImplementedException();
+            if (typeSeed <0 || typeSeed > 2) throw new ArgumentException("Invalid typeseed passed");
+
+            return (TrapType) typeSeed;
         }
     }
 }
