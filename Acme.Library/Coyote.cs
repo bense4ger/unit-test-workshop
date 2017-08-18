@@ -12,7 +12,7 @@ namespace Acme.Library
             TrapProcessor = processor;
         }
 
-        public ITrapProcessor TrapProcessor { get; }
+        private ITrapProcessor TrapProcessor { get; }
 
         private ITrapTypeSelector TypeSelector { get; }
         private ITrapFactory TrapFactory { get; }
