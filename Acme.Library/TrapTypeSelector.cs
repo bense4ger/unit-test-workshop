@@ -5,7 +5,7 @@ namespace Acme.Library
 {
     public class TrapTypeSelector : ITrapTypeSelector
     {
-        public TrapType Select()
+        public TrapType Select(int typeSeed)
         {
             throw new NotImplementedException();
         }
