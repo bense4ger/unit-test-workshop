@@ -2,6 +2,6 @@
 {
     public interface ITrapTypeSelector
     {
-        TrapType Select();
+        TrapType Select(int typeSeed);
     }
 }
