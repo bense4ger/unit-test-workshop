@@ -1,33 +1,29 @@
 ﻿using System;
+using Acme.Library.Interfaces;
 
 namespace Acme.Library
 {
     public class Coyote
     {
+        public Coyote(ITrapTypeSelector typeSelector, ITrapFactory trapFactory, ITrapProcessor processor)
+        {
+            TypeSelector = typeSelector;
+            TrapFactory = trapFactory;
+            TrapProcessor = processor;
+        }
+
+        public ITrapProcessor TrapProcessor { get; }
+
+        private ITrapTypeSelector TypeSelector { get; }
+        private ITrapFactory TrapFactory { get; }
+
         public TrapResult TryCatchRoadrunner()
         {
-            var trapType = (TrapType) TrapTypeSelector();
-            var trap = GetTrapFromFactory(trapType);
-            var result = Process(trap);
+            var trapType = TypeSelector.Select();
+            var trap = TrapFactory.Create(trapType);
+            var result = TrapProcessor.Process(trap);
 
             return result;
-        }
-
-        private int TrapTypeSelector()
-        {
-            var rnd = new Random();
-            return rnd.Next(0, 2);
-        }
-
-        private Trap GetTrapFromFactory(TrapType trapType)
-        {
-            var factory = new TrapFactory();
-            return factory.GetByType(trapType);
-        }
-
-        private TrapResult Process(Trap trap)
-        {
-            return new TrapResult();
         }
     }
 }
