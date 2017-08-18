@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.Library", "Acme.Library\Acme.Library.csproj", "{73325E68-BA84-4C7A-A6F6-1DD40EBB5D40}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.Library.Tests", "Acme.Library.Tests\Acme.Library.Tests.csproj", "{FFFE8624-E3D2-4663-90AF-85A0C3D8A048}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{73325E68-BA84-4C7A-A6F6-1DD40EBB5D40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73325E68-BA84-4C7A-A6F6-1DD40EBB5D40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73325E68-BA84-4C7A-A6F6-1DD40EBB5D40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFFE8624-E3D2-4663-90AF-85A0C3D8A048}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFFE8624-E3D2-4663-90AF-85A0C3D8A048}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFFE8624-E3D2-4663-90AF-85A0C3D8A048}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFFE8624-E3D2-4663-90AF-85A0C3D8A048}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
